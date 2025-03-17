@@ -14,9 +14,7 @@ export async function createUserAccount(user: INewUser) {
 
     return newAccount;
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return error;
   }
 }
-
-

@@ -29,15 +29,14 @@ const SignupForm = () => {
       username: "",
       email: "",
       password: "",
-    }, 
+    },
   });
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof SignupValidation>) {
     // Create the user
-    // const newUser = await createUserAccount(values);
-
-    // console.log(newUser);
+    const newUser = await createUserAccount(values);
+    console.log(newUser)
   }
 
   return (
@@ -47,7 +46,7 @@ const SignupForm = () => {
 
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-8">
           Create a new account
-        </h2> 
+        </h2>
 
         <p className="text-light-3 small-medium md:base-regular mt-2">
           To use Memento, please enter your details
